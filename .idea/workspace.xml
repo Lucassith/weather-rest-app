@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c1463a33-f140-41c8-8129-823db13441d8" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -92,12 +92,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="240">
-                <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+              <first_editor relative-caret-position="224">
+                <caret line="14" column="87" selection-start-line="14" selection-start-column="87" selection-end-line="14" selection-end-column="87" />
               </first_editor>
               <second_editor />
             </state>
@@ -113,11 +113,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="112">
-              <caret line="7" column="60" selection-start-line="7" selection-start-column="60" selection-end-line="7" selection-end-column="60" />
+            <state relative-caret-position="144">
+              <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -232,8 +232,8 @@
         <option value="$PROJECT_DIR$/routes/weather.ts" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/gulpfile.js" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -471,7 +471,7 @@
       <workItem from="1524900276133" duration="21536000" />
       <workItem from="1524985303852" duration="763000" />
       <workItem from="1524986097391" duration="7548000" />
-      <workItem from="1524993663318" duration="38079000" />
+      <workItem from="1524993663318" duration="38234000" />
     </task>
     <servers />
   </component>
@@ -508,7 +508,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="101174000" />
+    <option name="totallyTimeSpent" value="101329000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -530,10 +530,10 @@
       <window_info anchor="bottom" id="Run" order="8" weight="0.32985386" />
       <window_info id="npm" order="3" sideWeight="0.50311524" side_tool="true" weight="0.2524013" />
       <window_info anchor="right" id="Coverage" order="3" side_tool="true" weight="0.3361793" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="4" visible="true" weight="0.36012527" />
+      <window_info anchor="bottom" id="Terminal" order="4" visible="true" weight="0.36012527" />
       <window_info id="Gulp" order="0" sideWeight="0.5043478" side_tool="true" weight="0.25987193" />
       <window_info anchor="bottom" id="TypeScript" order="3" weight="0.32985386" />
-      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.49565217" visible="true" weight="0.25987193" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.49565217" visible="true" weight="0.25987193" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="0" weight="0.32977587" />
       <window_info anchor="bottom" id="Find" order="7" />
@@ -1072,16 +1072,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="240">
-            <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/LICENSE">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="64">
@@ -1091,8 +1081,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="7" column="60" selection-start-line="7" selection-start-column="60" selection-end-line="7" selection-end-column="60" />
+        <state relative-caret-position="144">
+          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="224">
+            <caret line="14" column="87" selection-start-line="14" selection-start-column="87" selection-end-line="14" selection-end-column="87" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
