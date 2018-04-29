@@ -1,7 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const ValidatorResult_1 = require("./ValidatorResult");
-const UnknownValidationRuleError_1 = require("../../errors/UnknownValidationRuleError");
 /**
  * TODO: Better composition. This is only to meet validation for "email sprawdzenie patterna". Use ValidatorJS (Validator.ts) instead.
  */
@@ -14,7 +13,7 @@ class BasicValidator {
             for (let validationType of Array.from(ruleSet.keys())) {
                 let fn = this['validate' + validationType.charAt(0).toUpperCase() + validationType.slice(1)];
                 if (typeof fn !== 'function') {
-                    throw new UnknownValidationRuleError_1.UnknownValidationRuleError('BasicValidator does not contain information on how to validate ' + validationType);
+                    throw new Error('BasicValidator does not contain information on how to validate ' + validationType);
                 }
                 if (!fn.apply(null, [data[key]])) {
                     result.isValid = false;

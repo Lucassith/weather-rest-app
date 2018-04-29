@@ -1,3 +1,3 @@
 export default {
-    allowedCities: ['New York', 'London']
+    allowedCities: ['New York', 'London', 'Paris']
 }

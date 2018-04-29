@@ -20,11 +20,11 @@ const Types_1 = require("../../container/Types");
 let WeatherController = class WeatherController {
     show(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
-            const metaweather = inversify_config_1.default.get(Types_1.default.Weather.IWeatherService);
+            const weatherService = inversify_config_1.default.get(Types_1.default.Weather.IWeatherService);
             const handler = inversify_config_1.default.get(Types_1.default.Handler.ProxyHandlers);
             const weatherDecorator = inversify_config_1.default.get(Types_1.default.Decorator.IWeatherDecorator);
             try {
-                let weather = yield metaweather.fetchWeather(req.query, handler);
+                let weather = yield weatherService.fetchWeather(req.query, handler);
                 res.send(weatherDecorator.decorate(weather));
             }
             catch (e) {

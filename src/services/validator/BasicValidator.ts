@@ -1,7 +1,6 @@
 import {IValidator} from "./interface/IValidator";
 import {ValidationRulesBuilder} from "./rule/builder/ValidationRulesBuilder";
 import {ValidatorResult} from "./ValidatorResult";
-import {UnknownValidationRuleError} from "../../errors/UnknownValidationRuleError";
 import {ValidationRule} from "./rule/ValidationRule";
 
 /**
@@ -17,7 +16,7 @@ export class BasicValidator implements IValidator {
             for (let validationType of Array.from(ruleSet.keys())) {
                 let fn = this['validate' + validationType.charAt(0).toUpperCase() + validationType.slice(1)];
                 if (typeof fn !== 'function') {
-                    throw new UnknownValidationRuleError('BasicValidator does not contain information on how to validate ' + validationType);
+                    throw new Error('BasicValidator does not contain information on how to validate ' + validationType);
                 }
                 if (!fn.apply(null, [data[key]])) {
                     result.isValid = false;
