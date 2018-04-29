@@ -13,3 +13,6 @@ Basic app to fetch temperature for current day. Batteries included.
 - Configure values in config files.
 - Run `gulp`
 - Request page `http://localhost:3000/weather?email=yourmail%40example.comm&city=LoNDoN`
+
+## Todo
+Search for TODO in code.

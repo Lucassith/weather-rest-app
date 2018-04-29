@@ -96,8 +96,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="224">
-                <caret line="14" column="87" selection-start-line="14" selection-start-column="87" selection-end-line="14" selection-end-column="87" />
+              <first_editor relative-caret-position="272">
+                <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
               </first_editor>
               <second_editor />
             </state>
@@ -471,7 +471,7 @@
       <workItem from="1524900276133" duration="21536000" />
       <workItem from="1524985303852" duration="763000" />
       <workItem from="1524986097391" duration="7548000" />
-      <workItem from="1524993663318" duration="38234000" />
+      <workItem from="1524993663318" duration="38440000" />
     </task>
     <servers />
   </component>
@@ -508,7 +508,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="101329000" />
+    <option name="totallyTimeSpent" value="101535000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -530,10 +530,10 @@
       <window_info anchor="bottom" id="Run" order="8" weight="0.32985386" />
       <window_info id="npm" order="3" sideWeight="0.50311524" side_tool="true" weight="0.2524013" />
       <window_info anchor="right" id="Coverage" order="3" side_tool="true" weight="0.3361793" />
-      <window_info anchor="bottom" id="Terminal" order="4" visible="true" weight="0.36012527" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="4" visible="true" weight="0.35386223" />
       <window_info id="Gulp" order="0" sideWeight="0.5043478" side_tool="true" weight="0.25987193" />
       <window_info anchor="bottom" id="TypeScript" order="3" weight="0.32985386" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.49565217" visible="true" weight="0.25987193" />
+      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.49565217" visible="true" weight="0.25987193" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="0" weight="0.32977587" />
       <window_info anchor="bottom" id="Find" order="7" />
@@ -1089,8 +1089,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="224">
-            <caret line="14" column="87" selection-start-line="14" selection-start-column="87" selection-end-line="14" selection-end-column="87" />
+          <first_editor relative-caret-position="272">
+            <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
           </first_editor>
           <second_editor />
         </state>
