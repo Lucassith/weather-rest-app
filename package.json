@@ -5,7 +5,7 @@
     "test": "jest --config=jest.config.json"
   },
   "version": "1.0.0",
-  "description": "",
+  "description": "Basic app to fetch weather for current day",
   "license": "Apache 2",
   "repository": "",
   "author": "Łukasz Sitarski",
