@@ -1,13 +1,13 @@
-#Weather REST App
+# Weather REST App
 Basic app to fetch temperature for current day. Batteries included.
 
-##Requirements
+## Requirements
 - Node.js 
 - NPM
 - Yarn
 - Gulp
 
-##How to run
+## How to run
 
 - Run `yarn install && yarn test`
 - Configure values in config files.
