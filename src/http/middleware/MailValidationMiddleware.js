@@ -12,24 +12,33 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var inversify_1 = require("inversify");
-var Types_1 = require("../../container/Types");
-var MailValidationMiddleware = /** @class */ (function () {
-    function MailValidationMiddleware(validator) {
+const inversify_1 = require("inversify");
+const Types_1 = require("../../container/Types");
+const ValidationRulesBuilder_1 = require("../../services/validator/rule/builder/ValidationRulesBuilder");
+let MailValidationMiddleware = class MailValidationMiddleware {
+    constructor(validator, ruleBuilder) {
         this._validator = validator;
+        this._ruleBuilder = ruleBuilder;
     }
-    MailValidationMiddleware.prototype.handle = function (req, res, next) {
-        var validationResult = this._validator.validate(req.query, { email: 'required|email' });
+    get validator() {
+        return this._validator;
+    }
+    handle(req, res, next) {
+        let validationResult = this._validator.validate(req.query, this._ruleBuilder
+            .newField('email')
+            .setEmail()
+            .setRequired()
+            .end());
         if (validationResult.isValid) {
             return next();
         }
         res.send(validationResult.messages);
-    };
-    MailValidationMiddleware = __decorate([
-        inversify_1.injectable(),
-        __param(0, inversify_1.inject(Types_1.default.IValidator)),
-        __metadata("design:paramtypes", [Object])
-    ], MailValidationMiddleware);
-    return MailValidationMiddleware;
-}());
+    }
+};
+MailValidationMiddleware = __decorate([
+    inversify_1.injectable(),
+    __param(0, inversify_1.inject(Types_1.default.Validator.IValidator)), __param(0, inversify_1.named('BasicValidator')),
+    __param(1, inversify_1.inject(Types_1.default.Validator.RuleBuilder)),
+    __metadata("design:paramtypes", [Object, ValidationRulesBuilder_1.ValidationRulesBuilder])
+], MailValidationMiddleware);
 exports.MailValidationMiddleware = MailValidationMiddleware;

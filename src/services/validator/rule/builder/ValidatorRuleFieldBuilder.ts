@@ -3,9 +3,9 @@ import {ValidationRulesBuilder} from "./ValidationRulesBuilder";
 
 export class ValidatorRuleFieldBuilder {
     protected _rule: ValidationRule;
-    protected _builder: ValidationRulesBuilder|null;
+    protected _builder: ValidationRulesBuilder | null;
 
-    constructor(fieldName: string, builder: ValidationRulesBuilder|null = null) {
+    constructor(fieldName: string, builder: ValidationRulesBuilder | null = null) {
         this._rule = new ValidationRule(fieldName);
         this._builder = builder;
     }
@@ -25,7 +25,7 @@ export class ValidatorRuleFieldBuilder {
         return this;
     }
 
-    end(): ValidationRulesBuilder|null {
+    end(): ValidationRulesBuilder | null {
         if (this._builder) {
             this._builder.addRule(this.build());
             return this._builder

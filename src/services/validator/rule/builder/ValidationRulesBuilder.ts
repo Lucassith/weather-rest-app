@@ -17,7 +17,7 @@ export class ValidationRulesBuilder {
         return new ValidatorRuleFieldBuilder(fieldName, this)
     }
 
-    build(strategy: IValidationRuleBuildStrategy|null = null) {
+    build(strategy: IValidationRuleBuildStrategy | null = null) {
         let rules = strategy ? strategy.build(Array.from(this._rules.values())) : this.rules;
         this.reset();
         return rules;

@@ -47,10 +47,3 @@ gulp.task('default', ['server:start'], function() {
     gulp.watch(serverTS, ['server:restart']);
 });
 
-gulp.task('run-tests', function(){
-    return gulp.src('tests/**/*.spec.ts')
-        .pipe(mocha({
-            reporter: 'nyan',
-            require: ['ts-node/register']
-        }));
-});

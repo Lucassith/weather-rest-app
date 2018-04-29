@@ -2,35 +2,68 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c1463a33-f140-41c8-8129-823db13441d8" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/__tests__/http/middleware/MailValidationMiddleware.test.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/__tests__/validator/BasicValidator.test.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/__tests__/validator/rule/builder/ValidationRuleFieldBuilder.test.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/__tests__/validator/rule/builder/ValidationRulesBuilder.test.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/__tests__/validator/rule/strategy/StringRuleStrategy.test.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/www" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/app.conf.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inversify.config.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jest.config.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes/weather.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/container/Types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/errors/UnknownValidationRuleError.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/http/controllers/WeatherController.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/http/middleware/CityValidationMiddleware.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/http/middleware/IMiddleware.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/http/middleware/MailValidationMiddleware.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/Weather.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/validator/BasicValidator.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/validator/Validator.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/validator/ValidatorResult.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/validator/interface/IValidationRuleBuildStrategy.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/validator/interface/IValidator.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/validator/rule/ValidationRule.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/validator/rule/builder/ValidationRulesBuilder.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/validator/rule/builder/ValidatorRuleFieldBuilder.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/validator/rule/strategy/StringRuleStrategy.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/weather/interface/IWeatherService.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/weather/metaweather/MetaweatherService.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/__tests__/services/decorator/WeatherDecorator.test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/__tests__/services/handler/request-handlers/PersistingHandler.test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/__tests__/services/http-client/AxiosClient.test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/__tests__/services/persisters/CouchDBPayloadPersister.test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/__tests__/services/weather/metaweather/MetaWeather.test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/pouchdb.conf.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/RequestData.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/decorator/WeatherDecorator.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/decorator/interface/IWeatherDecorator.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/handler/RequestHandler.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/handler/request-handler/handlers/ConsoleLogHandler.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/handler/request-handler/handlers/HttpHandler.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/handler/request-handler/handlers/PersistingHandler.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/handler/request-handler/handlers/StaticHandler.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/http-client/AxiosHttpClient.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/http-client/interface/IHttpClient.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/persisters/PouchDBPayloadPersister.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/persisters/interface/IPayloadPersister.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/persisters/interface/IPersister.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/__tests__/validator/BasicValidator.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/__tests__/services/validator/BasicValidator.test.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/__tests__/validator/rule/builder/ValidationRuleFieldBuilder.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/__tests__/services/validator/rule/builder/ValidationRuleFieldBuilder.test.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/__tests__/validator/rule/builder/ValidationRulesBuilder.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/__tests__/services/validator/rule/builder/ValidationRulesBuilder.test.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/__tests__/validator/rule/strategy/StringRuleStrategy.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/__tests__/services/validator/rule/strategy/StringRuleStrategy.test.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gulpfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/gulpfile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inversify.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/inversify.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inversify.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/inversify.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/stylesheets/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/weather.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/weather.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/weather.ts" beforeDir="false" afterPath="$PROJECT_DIR$/routes/weather.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/Types.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/Types.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/Types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/Types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/http/controllers/WeatherController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/http/controllers/WeatherController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/http/controllers/WeatherController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/http/controllers/WeatherController.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/http/middleware/CityValidationMiddleware.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/http/middleware/CityValidationMiddleware.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/http/middleware/CityValidationMiddleware.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/http/middleware/CityValidationMiddleware.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/http/middleware/IMiddleware.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/http/middleware/IMiddleware.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/http/middleware/MailValidationMiddleware.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/http/middleware/MailValidationMiddleware.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/http/middleware/MailValidationMiddleware.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/http/middleware/MailValidationMiddleware.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Weather.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Weather.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Weather.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Weather.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/validator/BasicValidator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/validator/BasicValidator.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/validator/Validator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/validator/Validator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/validator/Validator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/validator/Validator.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/validator/ValidatorResult.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/validator/ValidatorResult.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/validator/rule/ValidationRule.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/validator/rule/ValidationRule.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/validator/rule/builder/ValidationRulesBuilder.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/validator/rule/builder/ValidationRulesBuilder.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/validator/rule/builder/ValidatorRuleFieldBuilder.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/validator/rule/builder/ValidatorRuleFieldBuilder.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/validator/rule/strategy/StringRuleStrategy.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/validator/rule/strategy/StringRuleStrategy.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/weather/interface/IWeatherService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/weather/interface/IWeatherService.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/weather/metaweather/MetaweatherService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/weather/metaweather/MetaweatherService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/weather/metaweather/MetaweatherService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/weather/metaweather/MetaweatherService.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/error.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/index.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/layout.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -42,6 +75,8 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/weather_rest_app$test_validator_instances_ValidateAllowedCities_spec_ts.dat" NAME="test/validator/instances/ValidateAllowedCities.spec.ts Coverage Results" MODIFIED="1524861646124" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="MochaJavaScriptTestRunnerCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/weather_rest_app$ValidateAllowedCities_test_ts.dat" NAME="ValidateAllowedCities.test.ts Coverage Results" MODIFIED="1524909980921" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="JestJavaScriptTestRunnerCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/weather_rest_app$Decorate_weather.dat" NAME="Decorate weather Coverage Results" MODIFIED="1525036266272" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="JestJavaScriptTestRunnerCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/weather_rest_app$Full_Suite.dat" NAME="Full Suite Coverage Results" MODIFIED="1525036285679" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="JestJavaScriptTestRunnerCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/weather_rest_app$Can_validate_required_email.dat" NAME="Can validate required email Coverage Results" MODIFIED="1524953264742" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="JestJavaScriptTestRunnerCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/weather_rest_app$tests_validator_instances_ValidateAllowedCities_spec_ts.dat" NAME="tests/validator/instances/ValidateAllowedCities.spec.ts Coverage Results" MODIFIED="1524863618401" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="MochaJavaScriptTestRunnerCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/weather_rest_app$Unnamed.dat" NAME="Unnamed Coverage Results" MODIFIED="1524954294560" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="JestJavaScriptTestRunnerCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
@@ -71,35 +106,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MailValidationMiddleware.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/http/middleware/MailValidationMiddleware.ts">
+      <file leaf-file-name="ConsoleLogHandler.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/services/handler/request-handler/handlers/ConsoleLogHandler.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
+            <state relative-caret-position="240">
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
               <folding>
-                <element signature="e#0#45#0" expanded="true" />
+                <element signature="e#0#52#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MailValidationMiddleware.test.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/__tests__/http/middleware/MailValidationMiddleware.test.ts">
+      <file leaf-file-name="WeatherController.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/http/controllers/WeatherController.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-              <folding>
-                <element signature="e#0#13#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="64">
+              <caret line="6" column="44" selection-start-line="6" selection-start-column="44" selection-end-line="6" selection-end-column="44" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Validator.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/services/validator/Validator.ts">
+      <file leaf-file-name="tsconfig.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tsconfig.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="13" column="24" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
+            <state relative-caret-position="208">
+              <caret line="13" selection-start-line="13" selection-end-line="13" />
             </state>
           </provider>
         </entry>
@@ -107,8 +139,8 @@
       <file leaf-file-name="CityValidationMiddleware.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/http/middleware/CityValidationMiddleware.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="22" column="58" selection-start-line="22" selection-start-column="58" selection-end-line="22" selection-end-column="58" />
+            <state relative-caret-position="204">
+              <caret line="21" column="57" selection-start-line="21" selection-start-column="57" selection-end-line="21" selection-end-column="57" />
               <folding>
                 <element signature="e#0#45#0" expanded="true" />
               </folding>
@@ -116,14 +148,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ValidationRulesBuilder.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/services/validator/rule/builder/ValidationRulesBuilder.ts">
+      <file leaf-file-name="IMiddleware.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/http/middleware/IMiddleware.ts">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="inversify.config.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/inversify.config.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="464">
-              <caret line="29" column="1" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
+            <state relative-caret-position="-201">
+              <caret line="39" column="66" selection-start-line="39" selection-start-column="66" selection-end-line="39" selection-end-column="66" />
               <folding>
-                <element signature="e#0#49#0" expanded="true" />
+                <element signature="e#63#99#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="16">
+                <caret line="1" column="67" selection-start-line="1" selection-start-column="67" selection-end-line="1" selection-end-column="67" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -131,47 +180,28 @@
       <file leaf-file-name="gulpfile.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gulpfile.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="592">
-              <caret line="37" column="27" selection-start-line="37" selection-start-column="27" selection-end-line="37" selection-end-column="27" />
+            <state relative-caret-position="306">
+              <caret line="48" selection-start-line="48" selection-end-line="48" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jest.config.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jest.config.json">
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+            <state relative-caret-position="256">
+              <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="inversify.config.ts" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/inversify.config.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="21" column="102" selection-start-line="21" selection-start-column="102" selection-end-line="21" selection-end-column="102" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Types.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/container/Types.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="112">
-              <caret line="7" column="41" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="67" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IMiddleware.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/http/middleware/IMiddleware.ts">
+      <file leaf-file-name="MailValidationMiddleware.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/http/middleware/MailValidationMiddleware.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret selection-end-column="42" />
+              <folding>
+                <element signature="e#0#52#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -197,7 +227,18 @@
       <find>default</find>
       <find>typescript</find>
       <find>node</find>
+      <find>core</find>
+      <find>httphandl</find>
+      <find>defaults(</find>
+      <find>pouchdb</find>
+      <find>moment</find>
+      <find>console.log(</find>
+      <find>console.log</find>
     </findStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/src</dir>
+      <dir>$PROJECT_DIR$</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -205,57 +246,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/config/metaweather.conf.ts" />
-        <option value="$PROJECT_DIR$/src/services/validator/interface/IValidatorInstance.ts" />
-        <option value="$PROJECT_DIR$/src/services/validator/instances/ValidateMail.ts" />
-        <option value="$PROJECT_DIR$/src/http/controllers/WeatherController.ts" />
-        <option value="$PROJECT_DIR$/src/services/validator/ValidatorResult.ts" />
-        <option value="$PROJECT_DIR$/config/app.conf.ts" />
-        <option value="$PROJECT_DIR$/tests/validator/instances/ValidateAllowedCities.spec.ts" />
-        <option value="$PROJECT_DIR$/src/services/weather/metaweather/MetaweatherService.ts" />
-        <option value="$PROJECT_DIR$/test/mocha.opts" />
-        <option value="$PROJECT_DIR$/app.ts" />
+        <option value="$PROJECT_DIR$/src/services/handler/request-handler/handlers/PouchDBHanlder.ts" />
+        <option value="$PROJECT_DIR$/src/services/handler/request-handler/value-objects/HandlerResult.ts" />
+        <option value="$PROJECT_DIR$/src/persisters/interface/IPersister.ts" />
+        <option value="$PROJECT_DIR$/src/persisters/interface/IWebsitePersister.ts" />
         <option value="$PROJECT_DIR$/tsconfig.json" />
-        <option value="$PROJECT_DIR$/.nycrc" />
-        <option value="$PROJECT_DIR$/jest.config.ts" />
-        <option value="$PROJECT_DIR$/__tests__/sum-test.ts" />
-        <option value="$PROJECT_DIR$/__tests__/validator/instances/ValidateAllowedCities-test.ts" />
-        <option value="$PROJECT_DIR$/preprocessor.js" />
-        <option value="$PROJECT_DIR$/bin/www" />
-        <option value="$PROJECT_DIR$/gulpfile.js" />
-        <option value="$PROJECT_DIR$/src/services/validator/instances/ValidateAllowedCities.ts" />
-        <option value="$PROJECT_DIR$/src/services/validator/builder/ValidationRuleBuilder.ts" />
-        <option value="$PROJECT_DIR$/src/services/validator/ValidationRuleBuilder.ts" />
-        <option value="$PROJECT_DIR$/src/services/validator/ValidatorRuleFieldBuilder.ts" />
-        <option value="$PROJECT_DIR$/src/services/validator/interface/IValidationRuleBuildStrategy.ts" />
-        <option value="$PROJECT_DIR$/__tests__/validator/rule/strategy/StringRuleStrategy.ts" />
-        <option value="$PROJECT_DIR$/__tests__/validator/rule/strategy/StringRuleStrategy.test.ts" />
-        <option value="$PROJECT_DIR$/src/services/validator/rule/builder/ValidatorRuleFieldBuilder.ts" />
-        <option value="$PROJECT_DIR$/__tests__/validator/rule/builder/ValidationRuleBuilder.test.ts" />
-        <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/.jestrc" />
-        <option value="$PROJECT_DIR$/jest.config.js" />
-        <option value="$PROJECT_DIR$/jest.config.json" />
-        <option value="$PROJECT_DIR$/__tests__/validator/instances/ValidateAllowedCities.test.ts" />
-        <option value="$PROJECT_DIR$/src/services/validator/interface/IValidator.ts" />
-        <option value="$PROJECT_DIR$/src/services/validator/Validator.ts" />
-        <option value="$PROJECT_DIR$/src/services/validator/instances/CityValidator.ts" />
-        <option value="$PROJECT_DIR$/src/services/validator/rule/ValidationRule.ts" />
-        <option value="$PROJECT_DIR$/__tests__/validator/rule/builder/ValidationRuleFieldBuilder.ts" />
+        <option value="$PROJECT_DIR$/src/services/weather/interface/IWeatherResponseParser.ts" />
+        <option value="$PROJECT_DIR$/src/persisters/interface/IWeatherPersister.ts" />
+        <option value="$PROJECT_DIR$/__tests__/persisters/WebsitePersister.ts" />
+        <option value="$PROJECT_DIR$/src/persisters/PouchDBWeatherPersister.ts" />
+        <option value="$PROJECT_DIR$/src/persisters/interface/IPayloadPersister.ts" />
+        <option value="$PROJECT_DIR$/__tests__/persisters/CouchDBPayloadPersister.test.ts" />
+        <option value="$PROJECT_DIR$/src/services/handler/request-handler/handlers/PouchDBHandler.ts" />
+        <option value="$PROJECT_DIR$/__tests__/services/handler/request-handlers/PersistingHandler.ts" />
+        <option value="$PROJECT_DIR$/src/persisters/PouchDBPayloadPersister.ts" />
+        <option value="$PROJECT_DIR$/src/services/handler/request-handler/value-objects/RequestData.ts" />
+        <option value="$PROJECT_DIR$/src/services/http-client/interface/IHttpClient.ts" />
+        <option value="$PROJECT_DIR$/src/model/RequestData.ts" />
+        <option value="$PROJECT_DIR$/src/services/handler/request-handler/handlers/HttpHandler.ts" />
+        <option value="$PROJECT_DIR$/__tests__/services/handler/request-handlers/HttpHandler.test.ts" />
+        <option value="$PROJECT_DIR$/__tests__/services/http-client/axios-client.test.ts" />
+        <option value="$PROJECT_DIR$/__tests__/services/http-client/AxiosClient.test.ts" />
+        <option value="$PROJECT_DIR$/src/services/http-client/AxiosHttpClient.ts" />
+        <option value="$PROJECT_DIR$/src/services/weather/interface/IWeatherService.ts" />
+        <option value="$PROJECT_DIR$/__tests__/services/handler/request-handlers/PersistingHandler.test.ts" />
+        <option value="$PROJECT_DIR$/src/services/handler/request-handler/handlers/ConsoleLogHandler.ts" />
+        <option value="$PROJECT_DIR$/src/decorator/interface/IWebsiteDecorator.ts" />
+        <option value="$PROJECT_DIR$/src/decorator/interface/IWeatherDecorator.ts" />
+        <option value="$PROJECT_DIR$/src/services/handler/request-handler/handlers/PersistingHandler.ts" />
+        <option value="$PROJECT_DIR$/src/model/Weather.ts" />
+        <option value="$PROJECT_DIR$/src/decorator/WeatherDecorator.ts" />
+        <option value="$PROJECT_DIR$/src/services/handler/RequestHandler.ts" />
+        <option value="$PROJECT_DIR$/src/services/persisters/PouchDBPayloadPersister.ts" />
         <option value="$PROJECT_DIR$/src/http/middleware/CityValidationMiddleware.ts" />
-        <option value="$PROJECT_DIR$/__tests__/validator/BasicValidator.ts" />
-        <option value="$PROJECT_DIR$/src/errors/UnknownValidationRuleError.ts" />
         <option value="$PROJECT_DIR$/src/services/validator/rule/strategy/StringRuleStrategy.ts" />
-        <option value="$PROJECT_DIR$/src/services/validator/rule/builder/ValidationRulesBuilder.ts" />
-        <option value="$PROJECT_DIR$/src/services/validator/BasicValidator.ts" />
-        <option value="$PROJECT_DIR$/__tests__/validator/BasicValidator.test.ts" />
-        <option value="$PROJECT_DIR$/__tests__/validator/rule/builder/ValidationRuleFieldBuilder.test.ts" />
-        <option value="$PROJECT_DIR$/src/container/Types.ts" />
-        <option value="$PROJECT_DIR$/routes/weather.ts" />
-        <option value="$PROJECT_DIR$/__tests__/http/middleware/MailValidationMiddleware.ts" />
-        <option value="$PROJECT_DIR$/__tests__/http/middleware/MailValidationMiddleware.test.ts" />
-        <option value="$PROJECT_DIR$/src/http/middleware/MailValidationMiddleware.ts" />
+        <option value="$PROJECT_DIR$/__tests__/services/validator/rule/strategy/StringRuleStrategy.test.ts" />
+        <option value="$PROJECT_DIR$/src/services/validator/Validator.ts" />
         <option value="$PROJECT_DIR$/inversify.config.ts" />
+        <option value="$PROJECT_DIR$/src/container/Types.ts" />
+        <option value="$PROJECT_DIR$/src/http/controllers/WeatherController.ts" />
+        <option value="$PROJECT_DIR$/src/services/validator/BasicValidator.ts" />
+        <option value="$PROJECT_DIR$/src/services/weather/metaweather/MetaweatherService.ts" />
+        <option value="$PROJECT_DIR$/src/services/handler/request-handler/handlers/StaticHandler.ts" />
+        <option value="$PROJECT_DIR$/__tests__/services/weather/metaweather/MetaWeather.test.ts" />
+        <option value="$PROJECT_DIR$/__tests__/services/decorator/WebsiteDecorator.ts" />
+        <option value="$PROJECT_DIR$/src/services/decorator/WeatherDecorator.ts" />
+        <option value="$PROJECT_DIR$/__tests__/services/decorator/WeatherDecorator.test.ts" />
+        <option value="$PROJECT_DIR$/routes/weather.ts" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/gulpfile.js" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -314,9 +355,11 @@
   <component name="PhpServers">
     <servers />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="width" value="1920" />
-    <option name="height" value="1060" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="796" />
+    <option name="y" value="236" />
+    <option name="width" value="1276" />
+    <option name="height" value="708" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -330,78 +373,6 @@
               <item name="weather-rest-app" type="b2602c69:ProjectViewProjectNode" />
               <item name="weather-rest-app" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
-            <path>
-              <item name="weather-rest-app" type="b2602c69:ProjectViewProjectNode" />
-              <item name="weather-rest-app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="__tests__" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="weather-rest-app" type="b2602c69:ProjectViewProjectNode" />
-              <item name="weather-rest-app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="__tests__" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="http" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="weather-rest-app" type="b2602c69:ProjectViewProjectNode" />
-              <item name="weather-rest-app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="__tests__" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="http" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="middleware" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="weather-rest-app" type="b2602c69:ProjectViewProjectNode" />
-              <item name="weather-rest-app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="__tests__" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="validator" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="weather-rest-app" type="b2602c69:ProjectViewProjectNode" />
-              <item name="weather-rest-app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="routes" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="weather-rest-app" type="b2602c69:ProjectViewProjectNode" />
-              <item name="weather-rest-app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="weather-rest-app" type="b2602c69:ProjectViewProjectNode" />
-              <item name="weather-rest-app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="container" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="weather-rest-app" type="b2602c69:ProjectViewProjectNode" />
-              <item name="weather-rest-app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="errors" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="weather-rest-app" type="b2602c69:ProjectViewProjectNode" />
-              <item name="weather-rest-app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="http" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="weather-rest-app" type="b2602c69:ProjectViewProjectNode" />
-              <item name="weather-rest-app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="http" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="controllers" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="weather-rest-app" type="b2602c69:ProjectViewProjectNode" />
-              <item name="weather-rest-app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="http" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="middleware" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="weather-rest-app" type="b2602c69:ProjectViewProjectNode" />
-              <item name="weather-rest-app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="services" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -410,8 +381,10 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="type&#9;FILE&#9;file:///mnt/armor-a85/docs/Projects/weather-rest-app/src/container/Types.ts&#10;TYPES&#9;FILE&#9;file:///mnt/armor-a85/docs/Projects/weather-rest-app/src/container/Types.ts&#10;app.ts&#9;FILE&#9;file:///mnt/armor-a85/docs/Projects/weather-rest-app/app.ts&#10;W&#9;FILE&#9;file:///mnt/armor-a85/docs/Projects/weather-rest-app/src/http/request/WeatherRequest.ts" />
+    <property name="SearchEverywhereHistoryKey" value="staticH&#9;FILE&#9;file:///mnt/armor-a85/docs/Projects/weather-rest-app/src/services/handler/request-handler/handlers/StaticHandler.ts&#10;type&#9;FILE&#9;file:///mnt/armor-a85/docs/Projects/weather-rest-app/src/container/Types.ts&#10;TYPES&#9;FILE&#9;file:///mnt/armor-a85/docs/Projects/weather-rest-app/src/container/Types.ts&#10;metaw&#9;FILE&#9;file:///mnt/armor-a85/docs/Projects/weather-rest-app/src/services/weather/metaweather/MetaweatherService.ts&#10;meta&#9;FILE&#9;file:///mnt/armor-a85/docs/Projects/weather-rest-app/__tests__/services/weather/metaweather/MetaWeather.test.ts&#10;TYPE&#9;FILE&#9;file:///mnt/armor-a85/docs/Projects/weather-rest-app/src/container/Types.ts&#10;cityv&#9;FILE&#9;file:///mnt/armor-a85/docs/Projects/weather-rest-app/src/http/middleware/CityValidationMiddleware.ts&#10;app.ts&#9;FILE&#9;file:///mnt/armor-a85/docs/Projects/weather-rest-app/app.ts&#10;W&#9;FILE&#9;file:///mnt/armor-a85/docs/Projects/weather-rest-app/src/http/request/WeatherRequest.ts" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="add_unversioned_files" value="true" />
+    <property name="com.intellij.database.dataSource.DataSourceTemplate" value="Sqlite (Xerial)" />
     <property name="js.buildTools.grunt.grunt-cli.package" value="" />
     <property name="js.buildTools.gulp.gulp_package_dir" value="$PROJECT_DIR$/node_modules/gulp" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/jest.config.json" />
@@ -425,11 +398,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/services/validator/rule" />
-      <recent name="$PROJECT_DIR$/src/services/validator/builder" />
-      <recent name="$PROJECT_DIR$/src/services/validator" />
-      <recent name="$PROJECT_DIR$/src/model/ValueObject" />
-      <recent name="$PROJECT_DIR$/src/builder/model" />
+      <recent name="$PROJECT_DIR$/src/services" />
+      <recent name="$PROJECT_DIR$/__tests__/services" />
+      <recent name="$PROJECT_DIR$/src/model" />
+      <recent name="$PROJECT_DIR$/src/services/handler/request-handler/value-objects" />
+      <recent name="$PROJECT_DIR$/src/services/handler/request" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -444,17 +417,73 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
-    <configuration name="Test" type="JavaScriptTestRunnerJest" factoryName="Jest" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Jest.Full Suite">
+    <configuration name="Decorate weather" type="JavaScriptTestRunnerJest" factoryName="Jest" temporary="true" nameIsGenerated="true">
       <config-file value="$PROJECT_DIR$/jest.config.json" />
       <node-interpreter value="project" />
       <node-options value="" />
-      <working-dir value="$PROJECT_DIR$/__tests__/http/middleware" />
+      <working-dir value="$PROJECT_DIR$/__tests__/services/decorator" />
       <envs />
       <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/__tests__/http/middleware/MailValidationMiddleware.test.ts" />
+      <test-file value="$PROJECT_DIR$/__tests__/services/decorator/WeatherDecorator.test.ts" />
       <test-names>
-        <test-name value="Test" />
+        <test-name value="Decorate weather" />
+      </test-names>
+    </configuration>
+    <configuration name="Full Suite" type="JavaScriptTestRunnerJest" factoryName="Jest">
+      <config-file value="$PROJECT_DIR$/jest.config.json" />
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="ALL" />
+    </configuration>
+    <configuration name="Lowercase" type="JavaScriptTestRunnerJest" factoryName="Jest" temporary="true" nameIsGenerated="true">
+      <config-file value="$PROJECT_DIR$/jest.config.json" />
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <working-dir value="$PROJECT_DIR$/__tests__/services/validator/rule/strategy" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/__tests__/services/validator/rule/strategy/StringRuleStrategy.test.ts" />
+      <test-names>
+        <test-name value="Lowercase" />
+      </test-names>
+    </configuration>
+    <configuration name="Metaweather returns error on reject" type="JavaScriptTestRunnerJest" factoryName="Jest" temporary="true" nameIsGenerated="true">
+      <config-file value="$PROJECT_DIR$/jest.config.json" />
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <working-dir value="$PROJECT_DIR$/__tests__/services/weather/metaweather" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/__tests__/services/weather/metaweather/MetaWeather.test.ts" />
+      <test-names>
+        <test-name value="Metaweather returns error on reject" />
+      </test-names>
+    </configuration>
+    <configuration name="Metaweather returns promise of weather for valid data" type="JavaScriptTestRunnerJest" factoryName="Jest" temporary="true" nameIsGenerated="true">
+      <config-file value="$PROJECT_DIR$/jest.config.json" />
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <working-dir value="$PROJECT_DIR$/__tests__/services/weather/metaweather" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/__tests__/services/weather/metaweather/MetaWeather.test.ts" />
+      <test-names>
+        <test-name value="Metaweather returns promise of weather for valid data" />
+      </test-names>
+    </configuration>
+    <configuration name="Parse array rule to string" type="JavaScriptTestRunnerJest" factoryName="Jest" temporary="true" nameIsGenerated="true">
+      <config-file value="$PROJECT_DIR$/jest.config.json" />
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <working-dir value="$PROJECT_DIR$/__tests__/services/validator/rule/strategy" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/__tests__/services/validator/rule/strategy/StringRuleStrategy.test.ts" />
+      <test-names>
+        <test-name value="Parse array rule to string" />
       </test-names>
     </configuration>
     <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-js-file="$PROJECT_DIR$/bin/www" working-dir="$PROJECT_DIR$/bin" />
@@ -472,9 +501,21 @@
       <arguments />
       <envs />
     </configuration>
+    <list>
+      <item itemvalue="Jest.Full Suite" />
+      <item itemvalue="Jest.Metaweather returns promise of weather for valid data" />
+      <item itemvalue="Jest.Parse array rule to string" />
+      <item itemvalue="Jest.Lowercase" />
+      <item itemvalue="Jest.Metaweather returns error on reject" />
+      <item itemvalue="Jest.Decorate weather" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Jest.Test" />
+        <item itemvalue="Jest.Decorate weather" />
+        <item itemvalue="Jest.Metaweather returns error on reject" />
+        <item itemvalue="Jest.Metaweather returns promise of weather for valid data" />
+        <item itemvalue="Jest.Lowercase" />
+        <item itemvalue="Jest.Parse array rule to string" />
       </list>
     </recent_temporary>
   </component>
@@ -492,44 +533,45 @@
       <workItem from="1524864773536" duration="3286000" />
       <workItem from="1524900276133" duration="21536000" />
       <workItem from="1524985303852" duration="763000" />
-      <workItem from="1524986097391" duration="2836000" />
+      <workItem from="1524986097391" duration="7548000" />
+      <workItem from="1524993663318" duration="38001000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Test - 2018.04.29 at 09h 48m 37s.xml">
-      <configuration name="Test" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="Decorate_weather - 2018.04.29 at 23h 05m 27s.xml">
+      <configuration name="Decorate weather" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="Test - 2018.04.29 at 09h 49m 00s.xml">
-      <configuration name="Test" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="Decorate_weather - 2018.04.29 at 23h 05m 46s.xml">
+      <configuration name="Decorate weather" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="Test - 2018.04.29 at 09h 50m 59s.xml">
-      <configuration name="Test" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="Decorate_weather - 2018.04.29 at 23h 08m 04s.xml">
+      <configuration name="Decorate weather" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="Test - 2018.04.29 at 09h 51m 30s.xml">
-      <configuration name="Test" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="Decorate_weather - 2018.04.29 at 23h 08m 42s.xml">
+      <configuration name="Decorate weather" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="Test - 2018.04.29 at 09h 51m 49s.xml">
-      <configuration name="Test" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="Decorate_weather - 2018.04.29 at 23h 08m 52s.xml">
+      <configuration name="Decorate weather" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="Test - 2018.04.29 at 09h 56m 00s.xml">
-      <configuration name="Test" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="Decorate_weather - 2018.04.29 at 23h 11m 06s.xml">
+      <configuration name="Decorate weather" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="Test - 2018.04.29 at 09h 56m 36s.xml">
-      <configuration name="Test" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="Full_Suite - 2018.04.29 at 23h 11m 12s.xml">
+      <configuration name="Full Suite" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="Test - 2018.04.29 at 09h 57m 01s.xml">
-      <configuration name="Test" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="Full_Suite - 2018.04.29 at 23h 11m 25s.xml">
+      <configuration name="Full Suite" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="Test - 2018.04.29 at 09h 57m 30s.xml">
-      <configuration name="Test" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="Full_Suite - 2018.04.29 at 23h 17m 13s.xml">
+      <configuration name="Full Suite" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="Test - 2018.04.29 at 09h 59m 52s.xml">
-      <configuration name="Test" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="Full_Suite - 2018.04.29 at 23h 17m 26s.xml">
+      <configuration name="Full Suite" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58383000" />
+    <option name="totallyTimeSpent" value="101096000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -550,45 +592,75 @@
       <window_info anchor="bottom" id="Version Control" order="5" weight="0.32985386" />
       <window_info anchor="bottom" id="Run" order="8" weight="0.32985386" />
       <window_info id="npm" order="3" sideWeight="0.50311524" side_tool="true" weight="0.2524013" />
-      <window_info anchor="bottom" id="Terminal" order="4" weight="0.32985386" />
-      <window_info id="Gulp" order="0" sideWeight="0.5008696" side_tool="true" weight="0.2524013" />
+      <window_info anchor="right" id="Coverage" order="3" side_tool="true" weight="0.3361793" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="4" visible="true" weight="0.36012527" />
+      <window_info id="Gulp" order="0" sideWeight="0.5043478" side_tool="true" weight="0.25987193" />
       <window_info anchor="bottom" id="TypeScript" order="3" weight="0.32985386" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.49688473" visible="true" weight="0.25773746" />
+      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.49565217" visible="true" weight="0.25987193" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="0" weight="0.32977587" />
+      <window_info anchor="bottom" id="Find" order="7" />
       <window_info id="Structure" order="4" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="1" sideWeight="0.5008696" side_tool="true" weight="0.2524013" />
-      <window_info anchor="bottom" id="Debug" order="9" visible="true" weight="0.39979124" />
+      <window_info anchor="bottom" id="Debug" order="9" weight="0.39979124" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
       <window_info anchor="right" id="Commander" order="1" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="6" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="7" />
-      <window_info anchor="right" id="Coverage" order="3" side_tool="true" weight="0.3361793" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
     <option name="exactExcludedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/container/Types.js" />
-        <option value="$PROJECT_DIR$/src/services/weather/metaweather/MetaweatherService.js" />
-        <option value="$PROJECT_DIR$/src/http/controllers/WeatherController.js" />
-        <option value="$PROJECT_DIR$/src/services/weather/interface/IWeatherService.js" />
-        <option value="$PROJECT_DIR$/src/model/Weather.js" />
-        <option value="$PROJECT_DIR$/config/app.conf.js" />
-        <option value="$PROJECT_DIR$/src/services/validator/ValidatorResult.js" />
-        <option value="$PROJECT_DIR$/src/services/validator/Validator.js" />
-        <option value="$PROJECT_DIR$/src/services/validator/interface/IValidator.js" />
-        <option value="$PROJECT_DIR$/app.js" />
-        <option value="$PROJECT_DIR$/inversify.config.js" />
-        <option value="$PROJECT_DIR$/src/http/middleware/CityValidationMiddleware.js" />
-        <option value="$PROJECT_DIR$/src/http/middleware/IMiddleware.js" />
         <option value="$PROJECT_DIR$/src/http/middleware/MailValidationMiddleware.js" />
+        <option value="$PROJECT_DIR$/src/services/weather/interface/IWeatherService.js" />
+        <option value="$PROJECT_DIR$/__tests__/services/http-client/AxiosClient.test.js" />
+        <option value="$PROJECT_DIR$/src/services/validator/rule/strategy/StringRuleStrategy.js" />
+        <option value="$PROJECT_DIR$/src/http/middleware/IMiddleware.js" />
+        <option value="$PROJECT_DIR$/src/services/http-client/interface/IHttpClient.js" />
+        <option value="$PROJECT_DIR$/config/app.conf.js" />
+        <option value="$PROJECT_DIR$/src/services/validator/rule/ValidationRule.js" />
+        <option value="$PROJECT_DIR$/src/services/validator/interface/IValidator.js" />
+        <option value="$PROJECT_DIR$/src/services/handler/request-handler/handlers/StaticHandler.js" />
+        <option value="$PROJECT_DIR$/src/services/validator/rule/builder/ValidationRulesBuilder.js" />
+        <option value="$PROJECT_DIR$/src/services/weather/metaweather/MetaweatherService.js" />
+        <option value="$PROJECT_DIR$/src/services/validator/ValidatorResult.js" />
+        <option value="$PROJECT_DIR$/src/errors/UnknownValidationRuleError.js" />
+        <option value="$PROJECT_DIR$/src/services/handler/request-handler/handlers/PersistingHandler.js" />
+        <option value="$PROJECT_DIR$/src/services/persisters/interface/IPersister.js" />
+        <option value="$PROJECT_DIR$/src/services/persisters/interface/IPayloadPersister.js" />
+        <option value="$PROJECT_DIR$/__tests__/services/validator/BasicValidator.test.js" />
+        <option value="$PROJECT_DIR$/src/http/controllers/WeatherController.js" />
         <option value="$PROJECT_DIR$/routes/weather.js" />
+        <option value="$PROJECT_DIR$/src/services/persisters/PouchDBPayloadPersister.js" />
+        <option value="$PROJECT_DIR$/src/container/Types.js" />
+        <option value="$PROJECT_DIR$/__tests__/services/validator/rule/builder/ValidationRulesBuilder.test.js" />
         <option value="$PROJECT_DIR$/routes/index.js" />
+        <option value="$PROJECT_DIR$/src/services/validator/BasicValidator.js" />
+        <option value="$PROJECT_DIR$/__tests__/services/weather/metaweather/MetaWeather.test.js" />
+        <option value="$PROJECT_DIR$/src/services/validator/rule/builder/ValidatorRuleFieldBuilder.js" />
+        <option value="$PROJECT_DIR$/src/http/middleware/CityValidationMiddleware.js" />
+        <option value="$PROJECT_DIR$/config/pouchdb.conf.js" />
+        <option value="$PROJECT_DIR$/__tests__/services/persisters/CouchDBPayloadPersister.test.js" />
+        <option value="$PROJECT_DIR$/src/services/validator/interface/IValidationRuleBuildStrategy.js" />
+        <option value="$PROJECT_DIR$/src/services/http-client/AxiosHttpClient.js" />
+        <option value="$PROJECT_DIR$/src/services/validator/Validator.js" />
+        <option value="$PROJECT_DIR$/src/model/Weather.js" />
+        <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/src/services/handler/RequestHandler.js" />
+        <option value="$PROJECT_DIR$/__tests__/services/handler/request-handlers/PersistingHandler.test.js" />
+        <option value="$PROJECT_DIR$/src/services/handler/request-handler/handlers/ConsoleLogHandler.js" />
+        <option value="$PROJECT_DIR$/inversify.config.js" />
+        <option value="$PROJECT_DIR$/src/model/RequestData.js" />
+        <option value="$PROJECT_DIR$/__tests__/services/validator/rule/strategy/StringRuleStrategy.test.js" />
+        <option value="$PROJECT_DIR$/__tests__/services/validator/rule/builder/ValidationRuleFieldBuilder.test.js" />
+        <option value="$PROJECT_DIR$/src/services/handler/request-handler/handlers/HttpHandler.js" />
+        <option value="$PROJECT_DIR$/__tests__/services/decorator/WeatherDecorator.test.js" />
+        <option value="$PROJECT_DIR$/src/services/decorator/interface/IWeatherDecorator.js" />
+        <option value="$PROJECT_DIR$/src/services/decorator/WeatherDecorator.js" />
       </list>
     </option>
   </component>
@@ -606,46 +678,68 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/__tests__/http/middleware/MailValidationMiddleware.test.ts</url>
           <line>9</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="86" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/http/middleware/MailValidationMiddleware.ts</url>
-          <line>19</line>
+          <url>file://$PROJECT_DIR$/__tests__/services/persisters/CouchDBPayloadPersister.test.ts</url>
+          <line>8</line>
           <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="87" />
+          <option name="timeStamp" value="235" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="94" />
+      <option name="time" value="238" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="JavaScriptTestRunnerJest">
-        <watch expression="!!value;" language="TypeScript" />
-        <watch expression="request.parentRequest.serviceIdentifier" language="TypeScript" />
-        <watch expression="request.parentRequest.serviceIdentifier == Symbol(MailValidationMiddleware);" language="TypeScript" />
-        <watch expression="request.parentRequest.serviceIdentifier " language="TypeScript" />
+        <watch expression="payload" language="TypeScript" />
+        <watch expression="persisterData" language="TypeScript" />
       </configuration>
     </watches-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
       <expression>
+        <expression-string>persisterData</expression-string>
+        <language-id>TypeScript</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>payload</expression-string>
+        <language-id>TypeScript</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>doc['weather']</expression-string>
+        <language-id>TypeScript</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>this._pouchDB.get('identifier')</expression-string>
+        <language-id>TypeScript</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string />
+        <language-id>TypeScript</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
         <expression-string>request.parentRequest.serviceIdentifier</expression-string>
         <language-id>TypeScript</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>request.parentRequest.serviceIdentifier == Symbol(MailValidationMiddleware);</expression-string>
+        <expression-string />
         <language-id>TypeScript</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>request.parentRequest.serviceIdentifier == Symbol('MailValidationMiddleware');</expression-string>
+        <expression-string />
         <language-id>TypeScript</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>request.parentRequest.serviceIdentifier === Symbol('MailValidationMiddleware');</expression-string>
+        <expression-string />
         <language-id>TypeScript</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
@@ -654,186 +748,162 @@
         <language-id>TypeScript</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
-      <expression>
-        <expression-string>!!value;</expression-string>
-        <language-id>TypeScript</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>data[key]</expression-string>
-        <language-id>TypeScript</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>key</expression-string>
-        <language-id>TypeScript</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>data</expression-string>
-        <language-id>TypeScript</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/__tests__/http/middleware/MailValidationMiddleware.test.ts">
+    <entry file="file://$PROJECT_DIR$/__tests__/services/handler/request-handlers/HttpHandler.test.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
+        <state relative-caret-position="48">
+          <caret line="3" column="9" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/axios-mock-adapter/types/index.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="29" column="2" selection-start-line="29" selection-start-column="2" selection-end-line="29" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/services/http-client/interface/IHttpClient.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="3" column="53" selection-start-line="3" selection-start-column="53" selection-end-line="3" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/style.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/services/http-client/AxiosHttpClient.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+          <folding>
+            <element signature="e#0#52#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/__tests__/services/http-client/AxiosClient.test.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="32" column="8" lean-forward="true" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="32" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/services/validator/ValidatorRules.ts" />
-    <entry file="file://$PROJECT_DIR$/src/services/validator/interface/IValidatorInstance.ts" />
-    <entry file="file://$PROJECT_DIR$/node_modules/express/lib/response.js" />
-    <entry file="file://$PROJECT_DIR$/src/services/weather/interface/IWeatherService.ts">
+    <entry file="file://$PROJECT_DIR$/src/services/handler/request-handler/handlers/HttpHandler.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="5" column="48" selection-start-line="5" selection-start-column="48" selection-end-line="5" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/app.conf.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16">
-          <caret line="1" column="40" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/orchestrator/index.js" />
-    <entry file="file://$PROJECT_DIR$/tsd.json" />
-    <entry file="file://$PROJECT_DIR$/src/services/validator/Validator.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/services/weather/metaweather/MetaweatherService.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="15" column="3" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/mocha.opts" />
-    <entry file="file://$PROJECT_DIR$/src/services/validator/ValidatorResult.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="25" column="7" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.nycrc" />
-    <entry file="file://$PROJECT_DIR$/__tests__/sum-test.ts" />
-    <entry file="file://$PROJECT_DIR$/preprocessor.js" />
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="24" column="21" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/index.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16">
-          <caret line="16" column="56" selection-start-line="16" selection-start-column="56" selection-end-line="16" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/inversify/dts/container/container.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/www">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="6" selection-start-line="6" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tsconfig.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/__tests__/validator/instances/ValidateAllowedCities.test.js" />
-    <entry file="file://$PROJECT_DIR$/__tests__/validator/instances/ValidateAllowedCities.test.ts" />
-    <entry file="file://$PROJECT_DIR$/src/model/Weather.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/services/validator/instances/CityValidator.ts" />
-    <entry file="file://$PROJECT_DIR$/node_modules/typescript/lib/lib.es2015.iterable.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="118" lean-forward="true" selection-start-line="118" selection-end-line="118" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/services/validator/interface/IValidationRuleBuildStrategy.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="54" selection-start-column="54" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/services/validator/interface/IValidator.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+        <state relative-caret-position="256">
+          <caret line="16" column="53" lean-forward="true" selection-start-line="16" selection-start-column="53" selection-end-line="16" selection-end-column="53" />
           <folding>
-            <element signature="e#0#51#0" expanded="true" />
+            <element signature="e#0#52#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/services/validator/rule/ValidationRule.ts">
+    <entry file="file://$PROJECT_DIR$/src/model/Weather.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="17" column="38" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
+        <state relative-caret-position="64">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/services/validator/rule/strategy/StringRuleStrategy.ts">
+    <entry file="file://$PROJECT_DIR$/__tests__/services/handler/request-handlers/PersistingHandler.test.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inversify.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/@types/pouchdb-core/index.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="743">
+          <caret line="582" column="17" selection-start-line="582" selection-start-column="8" selection-end-line="582" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/@types/pouchdb/index.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="21" column="33" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/pouchdb.conf.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jest.config.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/__tests__/services/persisters/CouchDBPayloadPersister.test.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
-          <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+          <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/services/validator/BasicValidator.ts">
+    <entry file="file://$PROJECT_DIR$/src/services/weather/interface/IWeatherService.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="7" column="119" selection-start-line="7" selection-start-column="119" selection-end-line="7" selection-end-column="119" />
+        <state relative-caret-position="80">
+          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
           <folding>
-            <element signature="e#0#50#0" expanded="true" />
+            <element signature="e#0#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/services/handler/request-handler/handlers/PersistingHandler.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="15" column="61" selection-start-line="15" selection-start-column="61" selection-end-line="15" selection-end-column="61" />
+          <folding>
+            <element signature="e#0#52#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/__tests__/services/validator/rule/builder/ValidationRuleFieldBuilder.test.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/__tests__/services/validator/rule/builder/ValidationRulesBuilder.test.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="12" column="2" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -845,162 +915,250 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/services/validator/rule/builder/ValidatorRuleFieldBuilder.ts">
+    <entry file="file://$PROJECT_DIR$/src/services/validator/rule/builder/ValidationRulesBuilder.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="496">
-          <caret line="32" column="8" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="8" />
+        <state relative-caret-position="181">
+          <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
           <folding>
             <element signature="e#0#49#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/services/validator/interface/IValidationRuleBuildStrategy.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/services/validator/rule/strategy/StringRuleStrategy.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#90#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/RequestData.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/container/Types.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="8" column="52" selection-start-line="8" selection-start-column="52" selection-end-line="8" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/inversify/lib/container/container.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="229" column="20" selection-start-line="229" selection-start-column="20" selection-end-line="229" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/services/decorator/interface/IWeatherDecorator.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="3" column="29" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/services/validator/Validator.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="15" column="54" selection-start-line="15" selection-start-column="54" selection-end-line="15" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/services/persisters/PouchDBPayloadPersister.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="77">
+          <caret line="16" column="46" selection-start-line="16" selection-start-column="46" selection-end-line="16" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/services/weather/metaweather/MetaweatherService.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="17" column="99" selection-start-line="17" selection-start-column="99" selection-end-line="17" selection-end-column="99" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/services/handler/request-handler/handlers/StaticHandler.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="606">
+          <caret line="42" column="58" selection-start-line="42" selection-start-column="58" selection-end-line="42" selection-end-column="58" />
+          <folding>
+            <element signature="e#0#52#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/__tests__/services/weather/metaweather/MetaWeather.test.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="335">
+          <caret line="56" column="15" selection-start-line="56" selection-start-column="15" selection-end-line="56" selection-end-column="15" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/__tests__/services/validator/BasicValidator.test.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="17" column="41" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/__tests__/services/validator/rule/strategy/StringRuleStrategy.test.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/services/validator/BasicValidator.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="37" column="99" selection-start-line="37" selection-start-column="99" selection-end-line="37" selection-end-column="99" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/services/decorator/WeatherDecorator.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="3" column="33" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#44#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/__tests__/services/decorator/WeatherDecorator.test.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="4" column="33" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/index.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/weather.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="911">
+          <caret line="59" column="7" lean-forward="true" selection-start-line="59" selection-start-column="7" selection-end-line="59" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/services/handler/RequestHandler.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#52#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/services/handler/request-handler/handlers/ConsoleLogHandler.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+          <folding>
+            <element signature="e#0#52#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/http/controllers/WeatherController.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/__tests__/validator/BasicValidator.test.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1120">
-          <caret line="70" column="40" selection-start-line="70" selection-start-column="40" selection-end-line="70" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/__tests__/validator/rule/strategy/StringRuleStrategy.test.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/__tests__/validator/rule/builder/ValidationRulesBuilder.test.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/__tests__/validator/rule/builder/ValidationRuleFieldBuilder.test.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="27" column="59" selection-start-line="27" selection-start-column="59" selection-end-line="27" selection-end-column="59" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/errors/UnknownValidationRuleError.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="54" selection-start-column="54" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/weather.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="11" column="33" lean-forward="true" selection-start-line="11" selection-start-column="33" selection-end-line="14" selection-end-column="2" />
-          <folding>
-            <element signature="e#0#45#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gulpfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="592">
-          <caret line="37" column="27" selection-start-line="37" selection-start-column="27" selection-end-line="37" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/http/middleware/IMiddleware.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-column="42" />
+        <state relative-caret-position="64">
+          <caret line="6" column="44" selection-start-line="6" selection-start-column="44" selection-end-line="6" selection-end-column="44" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/http/middleware/CityValidationMiddleware.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="22" column="58" selection-start-line="22" selection-start-column="58" selection-end-line="22" selection-end-column="58" />
+        <state relative-caret-position="204">
+          <caret line="21" column="57" selection-start-line="21" selection-start-column="57" selection-end-line="21" selection-end-column="57" />
           <folding>
             <element signature="e#0#45#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/services/validator/Validator.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="13" column="24" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/services/validator/rule/builder/ValidationRulesBuilder.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="29" column="1" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#49#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/__tests__/http/middleware/MailValidationMiddleware.test.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/container/Types.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="7" column="41" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jest.config.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/src/http/middleware/IMiddleware.ts">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/http/middleware/MailValidationMiddleware.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
+        <state>
           <folding>
-            <element signature="e#0#45#0" expanded="true" />
+            <element signature="e#0#52#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/inversify.config.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="21" column="102" selection-start-line="21" selection-start-column="102" selection-end-line="21" selection-end-column="102" />
+        <state relative-caret-position="-201">
+          <caret line="39" column="66" selection-start-line="39" selection-start-column="66" selection-end-line="39" selection-end-column="66" />
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#63#99#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tsconfig.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gulpfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="48" selection-start-line="48" selection-end-line="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="16">
+            <caret line="1" column="67" selection-start-line="1" selection-start-column="67" selection-end-line="1" selection-end-column="67" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>

@@ -1,8 +1,7 @@
 import {Weather} from "../../../model/Weather";
-import {ValidatorResult} from "../../validator/ValidatorResult";
+import {Request} from "express";
+import {RequestHandler} from "../../handler/RequestHandler";
 
 export interface IWeatherService {
-    readonly validationRules: object;
-    validateInput(data: object): ValidatorResult;
-    fetchWeather(data: object): Weather;
+    fetchWeather(req: Request, handler: RequestHandler): Promise<Weather>;
 }

@@ -10,8 +10,13 @@ const ValidatorJS = require('validatorjs');
 @injectable()
 export class Validator implements IValidator {
     validate(data: object, rules: ValidationRulesBuilder): ValidatorResult {
-        let parsedRules = rules.build(new StringRuleStrategy());
-        let validator = new ValidatorJS(data, parsedRules);
+        let parsedRules = rules.build(new StringRuleStrategy(true));
+        let lowercaseData = {};
+        Object.keys(data).forEach(function (key) {
+            lowercaseData[key] = data[key].toLowerCase();
+        });
+
+        let validator = new ValidatorJS(lowercaseData, parsedRules);
         let results = new ValidatorResult();
         results.isValid = validator.passes();
         results.messages = validator.errors;

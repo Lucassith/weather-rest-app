@@ -7,7 +7,7 @@ import {ValidationRule} from "./rule/ValidationRule";
 /**
  * TODO: Better composition. This is only to meet validation for "email sprawdzenie patterna". Use ValidatorJS (Validator.ts) instead.
  */
-export class BasicValidator implements IValidator{
+export class BasicValidator implements IValidator {
     validate(data: object, rules: ValidationRulesBuilder): ValidatorResult {
         const result: ValidatorResult = new ValidatorResult();
         const validationRules: Map<string, ValidationRule> = rules.build();
@@ -32,12 +32,10 @@ export class BasicValidator implements IValidator{
 
     protected buildMessage(fieldName: string, validationType: string, payload: any): object {
         let errorObject: object = {
-            errors: {
-
-            }
+            errors: {}
         };
 
-        errorObject['errors'][fieldName] = `Value: ${payload} does not meet validation for ${validationType}`;
+        errorObject['errors'][fieldName] = `Value: ${payload} does not meet validation requirements for ${validationType}`;
         return errorObject;
     }
 

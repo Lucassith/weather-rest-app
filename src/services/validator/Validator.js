@@ -6,23 +6,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var inversify_1 = require("inversify");
+const inversify_1 = require("inversify");
 require("reflect-metadata");
-var ValidatorResult_1 = require("./ValidatorResult");
-var ValidatorJS = require('validatorjs');
-var Validator = /** @class */ (function () {
-    function Validator() {
-    }
-    Validator.prototype.validate = function (data, rules) {
-        var validator = new ValidatorJS(data, rules);
-        var results = new ValidatorResult_1.ValidatorResult();
+const ValidatorResult_1 = require("./ValidatorResult");
+const StringRuleStrategy_1 = require("./rule/strategy/StringRuleStrategy");
+const ValidatorJS = require('validatorjs');
+let Validator = class Validator {
+    validate(data, rules) {
+        let parsedRules = rules.build(new StringRuleStrategy_1.StringRuleStrategy(true));
+        let lowercaseData = {};
+        Object.keys(data).forEach(function (key) {
+            lowercaseData[key] = data[key].toLowerCase();
+        });
+        let validator = new ValidatorJS(lowercaseData, parsedRules);
+        let results = new ValidatorResult_1.ValidatorResult();
         results.isValid = validator.passes();
         results.messages = validator.errors;
         return results;
-    };
-    Validator = __decorate([
-        inversify_1.injectable()
-    ], Validator);
-    return Validator;
-}());
+    }
+};
+Validator = __decorate([
+    inversify_1.injectable()
+], Validator);
 exports.Validator = Validator;

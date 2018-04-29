@@ -8,10 +8,6 @@ import {ValidationRulesBuilder} from "../../services/validator/rule/builder/Vali
 @injectable()
 export class MailValidationMiddleware implements IMiddleware {
     protected _ruleBuilder: ValidationRulesBuilder;
-    protected _validator: IValidator;
-    get validator(): IValidator {
-        return this._validator;
-    }
 
     constructor(
         @inject(TYPES.Validator.IValidator) @named('BasicValidator') validator: IValidator,
@@ -21,14 +17,20 @@ export class MailValidationMiddleware implements IMiddleware {
         this._ruleBuilder = ruleBuilder;
     }
 
+    protected _validator: IValidator;
+
+    get validator(): IValidator {
+        return this._validator;
+    }
+
     handle(req: Request, res: Response, next: Function) {
         let validationResult = this._validator.validate(
             req.query,
             this._ruleBuilder
                 .newField('email')
-                    .setEmail()
-                    .setRequired()
-                    .end()
+                .setEmail()
+                .setRequired()
+                .end()
         );
 
         if (validationResult.isValid) {
