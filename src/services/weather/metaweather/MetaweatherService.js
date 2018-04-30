@@ -23,33 +23,57 @@ let MetaweatherService = class MetaweatherService {
         this._citySearch = '/api/location/search/?query=';
         this._weatherUrl = '/api/location/${woeid}/';
     }
-    // TODO: Refactor to small methods.
     fetchWeather(req, handler) {
         return __awaiter(this, void 0, void 0, function* () {
             return new Promise((resolve, reject) => __awaiter(this, void 0, void 0, function* () {
+                const city = req['city'];
+                let woeId;
+                let weather;
                 try {
-                    const city = req['city'];
-                    let response = yield handler.handle(new RequestData_1.RequestData(this._baseUrl + this._citySearch + city, 'GET'));
-                    if (response.length == 0 || !Number.isInteger(response[0]['woeid'])) {
-                        return reject('MetaWeather could find city: ' + city);
-                    }
-                    const woeId = response[0]['woeid'] || null;
-                    response = yield handler.handle(new RequestData_1.RequestData(this._baseUrl +
-                        this._weatherUrl.replace('${woeid}', woeId), 'GET'));
-                    let weather = new Weather_1.Weather();
-                    let firstForecast = response['consolidated_weather'][0];
-                    weather.temperature = firstForecast['the_temp'];
-                    weather.day = firstForecast['applicable_date'];
-                    if (Number.isInteger(response['fetchedAt'])) {
-                        weather.fetchedAt = response['fetchedAt'];
-                    }
-                    return resolve(weather);
+                    woeId = yield this.getWoeId(city, handler);
+                    let payload = yield this.getWeatherPayload(woeId, handler);
+                    weather = this.createWeatherObject(payload);
                 }
                 catch (e) {
                     return reject(e);
                 }
+                return resolve(weather);
             }));
         });
+    }
+    getWoeId(city, handler) {
+        return __awaiter(this, void 0, void 0, function* () {
+            return new Promise((resolve, reject) => __awaiter(this, void 0, void 0, function* () {
+                let response = [];
+                try {
+                    response = yield handler.handle(new RequestData_1.RequestData(this._baseUrl + this._citySearch + city, 'GET'));
+                }
+                catch (e) { }
+                if (response.length > 0 && Number.isInteger(response[0]['woeid'])) {
+                    return resolve(response[0]['woeid']);
+                }
+                return reject('MetaWeather did not resolve city: ' + city);
+            }));
+        });
+    }
+    getWeatherPayload(woeId, handler) {
+        return __awaiter(this, void 0, void 0, function* () {
+            return new Promise((resolve) => __awaiter(this, void 0, void 0, function* () {
+                let response = yield handler.handle(new RequestData_1.RequestData(this._baseUrl +
+                    this._weatherUrl.replace('${woeid}', woeId.toString()), 'GET'));
+                return resolve(response);
+            }));
+        });
+    }
+    createWeatherObject(payload) {
+        let weather = new Weather_1.Weather();
+        let firstForecast = payload['consolidated_weather'][0];
+        weather.temperature = firstForecast['the_temp'];
+        weather.day = firstForecast['applicable_date'];
+        if (Number.isInteger(payload['fetchedAt'])) {
+            weather.fetchedAt = payload['fetchedAt'];
+        }
+        return weather;
     }
 };
 MetaweatherService = __decorate([

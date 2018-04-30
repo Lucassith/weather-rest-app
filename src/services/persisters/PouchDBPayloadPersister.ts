@@ -40,6 +40,7 @@ export class PouchDBPayloadPersister implements IPayloadPersister {
         })
     }
 
+    //TODO: Implement data reset
     resetData(): boolean {
         throw new Error('Not implemented yet');
     }

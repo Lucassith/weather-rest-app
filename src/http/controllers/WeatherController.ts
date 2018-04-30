@@ -18,7 +18,6 @@ export class WeatherController {
             res.send(weatherDecorator.decorate(weather));
         } catch (e) {
             res.send(e);
-            return;
         }
     }
 }

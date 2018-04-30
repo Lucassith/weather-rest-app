@@ -29,7 +29,6 @@ let WeatherController = class WeatherController {
             }
             catch (e) {
                 res.send(e);
-                return;
             }
         });
     }

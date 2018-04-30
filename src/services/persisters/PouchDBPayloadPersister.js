@@ -54,6 +54,7 @@ let PouchDBPayloadPersister = class PouchDBPayloadPersister {
             });
         });
     }
+    //TODO: Implement data reset
     resetData() {
         throw new Error('Not implemented yet');
     }
