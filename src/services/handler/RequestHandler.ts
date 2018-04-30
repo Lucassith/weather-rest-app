@@ -18,31 +18,25 @@ export abstract class RequestHandler {
     }
 
     async handle(requestData: RequestData): Promise<object> {
-        let payload: object = null;
-
-        try {
-            payload = await this.process(requestData);
-        }
-        catch (e) {
-            if (this._handler) {
-                try {
-                    payload = await this._handler.handle(requestData);
-                    if (payload) {
-                        this.afterProcess(payload, requestData);
+        return new Promise<object>(async (resolve, reject) => {
+            let payload: object = null;
+            try {
+                payload = await this.process(requestData);
+                return resolve(payload)
+            }
+            catch (e) {
+                if (this._handler) {
+                    try {
+                        payload = await this._handler.handle(requestData);
+                        if (payload) {
+                            this.afterProcess(payload, requestData);
+                        }
+                        return resolve(payload);
                     }
-                }
-                catch (e) {
-                    console.log('Unable to find payload for resource: ' + requestData)
+                    catch(e) {}
                 }
             }
-        }
-
-        return new Promise<object>((resolve, reject) => {
-            if (payload) {
-                resolve(payload)
-            } else {
-                reject('Unable to resolve payload in handlers.');
-            }
+            return reject('Unable to resolve payload in handlers.');
         })
     }
 

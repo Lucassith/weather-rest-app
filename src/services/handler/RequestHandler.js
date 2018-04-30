@@ -30,31 +30,26 @@ let RequestHandler = class RequestHandler {
     }
     handle(requestData) {
         return __awaiter(this, void 0, void 0, function* () {
-            let payload = null;
-            try {
-                payload = yield this.process(requestData);
-            }
-            catch (e) {
-                if (this._handler) {
-                    try {
-                        payload = yield this._handler.handle(requestData);
-                        if (payload) {
-                            this.afterProcess(payload, requestData);
+            return new Promise((resolve, reject) => __awaiter(this, void 0, void 0, function* () {
+                let payload = null;
+                try {
+                    payload = yield this.process(requestData);
+                    return resolve(payload);
+                }
+                catch (e) {
+                    if (this._handler) {
+                        try {
+                            payload = yield this._handler.handle(requestData);
+                            if (payload) {
+                                this.afterProcess(payload, requestData);
+                            }
+                            return resolve(payload);
                         }
-                    }
-                    catch (e) {
-                        console.log('Unable to find payload for resource: ' + requestData);
+                        catch (e) { }
                     }
                 }
-            }
-            return new Promise((resolve, reject) => {
-                if (payload) {
-                    resolve(payload);
-                }
-                else {
-                    reject('Unable to resolve payload in handlers.');
-                }
-            });
+                return reject('Unable to resolve payload in handlers.');
+            }));
         });
     }
     afterProcess(weather, requestData) {
